@@ -17,7 +17,3 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
       - run: mvn integration-test
-      - run: |
-          cp target/test-pertama-0.0.1-SNAPSHOT.jar docker/restful/app.jar
-          cd docker/restful
-          docker build -t test-pertama .
